@@ -15,6 +15,7 @@ Shader "EggParty/Shaer_Body"
         _DetailNormalIntensity("Detail Normal Intensity",float) = 1.0
         _AnisoNormalEnable("Aniso Normal Enable", range(0.0,1.0)) = 0.5
         _AnisoPow("Aniso Pow",range(0.0, 3.0)) = 1.0
+        _NormalScale("Main Normal Scale",range(0.0, 2.0)) = 1.0
         //frenel
         _FresnelPow("Fresnel Pow", range(0.5,5.0)) = 2.5
         _FresnelScale("Fresnel Scale",range(0.0,1.0)) = 0.5
@@ -105,6 +106,7 @@ Shader "EggParty/Shaer_Body"
             float4 _BaseColor;
             float4 _MentalColor;
             float4 _AnisoColor;
+            float _NormalScale;
 
          CBUFFER_END
 
@@ -143,12 +145,14 @@ Shader "EggParty/Shaer_Body"
              //构建btn矩阵：切线空间到世界空间
              float3x3 TBN = float3x3(tangentWS, binormalWS, normalWS);
              float3x3 TBN_I = transpose(TBN);
-
+           
           
              //基础贴图采样
              half4 albedo = SAMPLE_TEXTURE2D(_AlbedoTex,sampler_AlbedoTex, uv);
              half4 normal = SAMPLE_TEXTURE2D(_NormalMap, sampler_NormalMap, uv);
-             float3 normalTS  = normal.xyz * 2.0 - 1.0;
+            // float3 normalTS = UnpackNormal(normal, _NormalScale);
+             float3 normalTS = UnpackNormalScale(normal, _NormalScale);
+             float3 finalNormalWS = mul(TBN, normalTS);
              half4 mask = SAMPLE_TEXTURE2D(_MaskTex,sampler_MaskTex, uv);
              half4 matcap = SAMPLE_TEXTURE2D(_MatCap,sampler_MatCap, uv);
              half4 basedetailnormal = SAMPLE_TEXTURE2D(_DetailNormalMap,sampler_DetailNormalMap,uv);
@@ -158,7 +162,12 @@ Shader "EggParty/Shaer_Body"
              float3 viewDirTS = mul(TBN_I,viewDir );
              float3 norViewDir = normalize(viewDir);
              float3 norviewDirTS = normalize(viewDirTS);
-             float vDotn = dot(norViewDir, normalWS);
+             Light mainLight = GetMainLight();
+             float3 sunDir = mainLight.direction;
+             float3 lightDir = normalize((-sunDir) + viewDir);
+             float vDotn = normalize(dot(norViewDir, finalNormalWS));
+             float nDotl = normalize(dot(lightDir, finalNormalWS));
+            
              //采样细节法线，支持多个UV模式
              float2 detailNormuv1 = frac(uv * 4.0) * _DetailNormalUVTilling * 0.25;
              float2 detailNormuv2 = uv  * _DetailNormalUVTilling;
@@ -190,9 +199,7 @@ Shader "EggParty/Shaer_Body"
              float3 binorMixed = cross(normalMixed, tangentWS);
              float3 VerticalWS = normalize(mul(TBN, float3(0.0, 1.0, 0.0)));
              float3 AnisoMix = lerp(VerticalWS, binorMixed , _AnisoNormalEnable);
-             Light mainLight = GetMainLight();
-             float3 sunDir = mainLight.direction;
-             float3 lightDir = normalize((-sunDir) + viewDir);
+      
              float anisoLightDot = dot(AnisoMix, lightDir);
              float detailNormalAlpha = basedetailnormal.w;
 
@@ -252,9 +259,10 @@ Shader "EggParty/Shaer_Body"
               float3 anisoMentalEffect =lerp(1.0, lerp(1.0, 0.8, ((clamp((pow((clamp((biViewDot - 0.8), 0.0,1.0)), 0.2)), 0.0,1.0)) * 2.0)), _changeBY);
               float3 RougAnisoMix = roughnessBlend * anisoMentalEffect;
               float3 finalBaseColor = RougAnisoMix * _BaseColor * _TintValue;
+              
               half4 final = lerp(albedo,mask.y * anisoPow * RoughnessMask  * albedo ,mask.y * anisoPow * RoughnessMask);
-             half4 final2 = half4(finalBaseColor, 1.0) + MatCapFinal * RoughnessMask * _MentalColor + MatCapFinal;
-             return  mask.y * anisoPow * RoughnessMask ;
+             half4 final2 = (half4(finalBaseColor, 1.0) + MatCapFinal * RoughnessMask * _MentalColor + MatCapFinal) * nDotl;
+             return final2 ;
          }
          ENDHLSL
 

@@ -1,0 +1,227 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: shaertest_head
+  m_Shader: {fileID: 4800000, guid: 4049a948d74f91942a99cd4d326bdd65, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 2800000, guid: a0bdae6c82357654397548904d9cb9eb, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DiffuseTex:
+        m_Texture: {fileID: 2800000, guid: a0bdae6c82357654397548904d9cb9eb, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GalaxyTex:
+        m_Texture: {fileID: 2800000, guid: e80d9f0ffd3650345b2b222d0d1a20c9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GalaxyTex2:
+        m_Texture: {fileID: 2800000, guid: 8e18471eba71e284f9e21b83ff801933, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MactCap:
+        m_Texture: {fileID: 2800000, guid: 3d027c3103d05dd4ab9a58531b178236, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: a0bdae6c82357654397548904d9cb9eb, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskTex:
+        m_Texture: {fileID: 2800000, guid: e22652affbca958418eccb801704b434, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NoiseTex:
+        m_Texture: {fileID: 2800000, guid: e80d9f0ffd3650345b2b222d0d1a20c9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Tex0:
+        m_Texture: {fileID: 2800000, guid: a70dd04e8c06f0a4a90cb27615b94e04, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlphaClip: 0
+    - _AlphaToMask: 0
+    - _Blend: 0
+    - _BlendModePreserveSpecular: 1
+    - _BlurAmount: 30.42
+    - _BottomSparKSpeed: 0.322
+    - _BottomSparkSpeed: 0.5
+    - _BrightStarsGlow: 10
+    - _BrightStarsIntensity: 4.08
+    - _BrightStarsThreshold: 0.912
+    - _BumpScale: 1
+    - _CenterIntensity: 1.89
+    - _ClearCoatMask: 0
+    - _ClearCoatSmoothness: 0
+    - _Cull: 2
+    - _Cutoff: 0.5
+    - _DetailAlbedoMapScale: 1
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _DstBlendAlpha: 0
+    - _EnvironmentReflections: 1
+    - _FrameTime: 4.84
+    - _FunctionTexBrightness: 8.31
+    - _GalaxyNoiseStrength: 0.1
+    - _GalaxyParallaxOffset: 101.6
+    - _GalaxyScale: 1.35
+    - _GammaPow: 2.2
+    - _GlossMapScale: 0
+    - _Glossiness: 0
+    - _GlossyReflections: 0
+    - _Metallic: 0
+    - _NoiseStrength: 0.48
+    - _OcclusionStrength: 1
+    - _Parallax: 0.005
+    - _PerlinDistortion: 2.85
+    - _QueueOffset: 0
+    - _ReceiveShadows: 1
+    - _RimBlurAmount: 4.32
+    - _RimOffset: 11
+    - _RimSmooth: 0.223
+    - _RimSmoothness: 0.142
+    - _RimStenght: 6
+    - _RimStrength: 5
+    - _Smoothness: 0.5
+    - _SmoothnessTextureChannel: 0
+    - _SparkColorExponent: 5
+    - _SparkColorexp: 1.8
+    - _SparkSpeed: -5
+    - _SparkTiling: 0.6
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _SrcBlendAlpha: 1
+    - _StarsGlowIntensity: 3.73
+    - _StarsIntensity: -2.84
+    - _StarsPulseSpeed: -0.93
+    - _StarsTwinkleAmount: 0.2
+    - _Surface: 0
+    - _Tilling: 0.693
+    - _TopSparkSpeed: 0.287
+    - _WorkflowMode: 1
+    - _ZWrite: 1
+    - _areaSwitch: -0.1
+    - _customMaskEmiCol: 6.68
+    - _galaxyNoiseMult: -0.26
+    - _galaxyOffset: 147.7
+    - _galaxySpeedX: 2.82
+    - _galaxySpeedY: 1.24
+    - _galaxytex2Mul: 1
+    - _galaxytex2Pow: 8
+    - _maskEmisMul: 8.25
+    - _maskEmisPow: 0.8
+    m_Colors:
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorTest: {r: 0.627451, g: 0.47058827, b: 0.9215687, a: 1}
+    - _ColorTest2: {r: 0.28627452, g: 0.20392159, b: 0.45882356, a: 1}
+    - _ColorTest3: {r: 1, g: 0.9053422, b: 0.18679237, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FresnelPara: {r: 0.1, g: 0.5, b: 2, a: 2}
+    - _GalaxyFlowSpeed: {r: 0.1, g: 0.1, b: 0, a: 0}
+    - _GalaxySpeed: {r: 0.1, g: 0.1, b: 0, a: 0}
+    - _RimColor: {r: 0.98490566, g: 0.629968, b: 0.629968, a: 1}
+    - _SoftBodyCenter: {r: 0, g: 0, b: 0, a: 1}
+    - _SoftBodyNX: {r: 0, g: 0, b: 0, a: 1}
+    - _SoftBodyNY: {r: 0, g: 0, b: 0, a: 1}
+    - _SoftBodyNZ: {r: 1.2, g: 0, b: 0, a: 1}
+    - _SoftBodyX: {r: 0, g: 0, b: 0, a: 1}
+    - _SoftBodyY: {r: 0, g: 0, b: 0, a: 1}
+    - _SoftBodyZ: {r: 0, g: 0, b: 0, a: 1}
+    - _SparkColor: {r: 0, g: 0.5389844, b: 0.6603774, a: 1}
+    - _SparkColor2: {r: 1, g: 0.6698113, b: 0.6698113, a: 1}
+    - _SparkColor3: {r: 1, g: 1, b: 1, a: 0.5803922}
+    - _SparkPara: {r: 0.3, g: 0.6, b: 1.43, a: -0.46}
+    - _SparkParameters: {r: 1, g: 1, b: 0.05, a: 0.03}
+    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _StarsColor: {r: 0.0015655532, g: 0.00013883201, b: 0.00013883201, a: 1}
+    - _emisPara: {r: 4.35, g: 1.76, b: 0.24, a: 1}
+    - _fresnelPara: {r: -0.02, g: 0.96, b: 2, a: 2}
+    - _galaxyPara: {r: 1, g: 1, b: 1, a: 1}
+    - _galaxyTexPara: {r: 1.7, g: 1.32, b: 0.49, a: 1.09}
+    - _matcapPara: {r: 7, g: 4.42, b: -0.02, a: -0.65}
+    - _noiseColor01: {r: 0.0521481, g: 0, b: 0.2981131, a: 1}
+  m_BuildTextureStacks: []
+--- !u!114 &5097460152651473017
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 7

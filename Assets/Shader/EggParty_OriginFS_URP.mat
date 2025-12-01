@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: EggParty_OriginFS_URP
+  m_Shader: {fileID: 4800000, guid: 90897abd92bcced438ddfb80598866dc, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlbedoTex:
+        m_Texture: {fileID: 2800000, guid: b9f3985b9d1099f4ab719fa1cf5bce93, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 2800000, guid: 6804d8533dab4e649b595d3a2cd6fdfb, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskTex:
+        m_Texture: {fileID: 2800000, guid: af5495d9359385540bf6504bd2045068, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MatCap:
+        m_Texture: {fileID: 2800000, guid: 3f45fed2b84799c4d9c583b3d70dd97b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 2800000, guid: 3c1dda244573a5d47a5d0cecc5319aea, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ReflectionProbe:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlphaBlend: 0.27
+    - _AlphaMtl: 0.46
+    - _AnisoNormalEnable: 0.586
+    - _AnisoPow: 1
+    - _BaseEmissiveKey: -0.98
+    - _BaseMetalness: 1.42
+    - _DetailNormalIntensity: -0.46
+    - _DetailNormalUVTiling: 6.2
+    - _EmissiveBreathEnable: 0.007
+    - _EmissiveBreathPercent: -0.12
+    - _EmissiveBreathSpd: 2.57
+    - _EmissiveValue: 1
+    - _FA: -1.54
+    - _FB: 19.85
+    - _FRPow: 3.69
+    - _FRScale: 0.769
+    - _FrenelEmiStr: 2.05
+    - _FrenelMaskEnable: 0.329
+    - _FresnelPow: 3.76
+    - _FresnelScale: 0.737
+    - _MetalnessMaskEnable: 1
+    - _SSColorIntensity: 1.33
+    - _SSColorIntensityA: 1
+    - _TimeValue: 1
+    - _TintValue: 2
+    - _UseDefaultEmis: 1
+    - _changeBY: 0.537
+    m_Colors:
+    - _AnisoColor: {r: 1, g: 1, b: 1, a: 1}
+    - _AnisoMentalColor: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _FrenelColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Intensity: {r: 1, g: 1, b: 1, a: 1}
+    - _MentalColor: {r: 1, g: 0.5415094, b: 0.5415094, a: 1}
+    - _RimColor: {r: 1, g: 1, b: 1, a: 1}
+    - _SSColor: {r: 1, g: 1, b: 1, a: 1}
+    - _SSColorA: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
